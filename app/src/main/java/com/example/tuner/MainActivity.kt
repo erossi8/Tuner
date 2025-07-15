@@ -118,7 +118,7 @@ class MainActivity : AppCompatActivity(), SettingsDialog.SettingsListener {
 
         val frequency = calculateNoteFrequency(note, octave)
         val sampleRate = 44100
-        val duration = 4 // secondi
+        val duration = 3 // secondi
         val numSamples = duration * sampleRate
         val samples = ShortArray(numSamples)
 
