@@ -13,6 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Test2">
 
+
         <!-- Activity principale -->
         <activity
             android:name="com.example.tuner.MainActivity"
@@ -21,6 +22,7 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
         <activity android:name="com.example.tuner.TonalitaActivity" />
         <activity android:name="com.example.tuner.TonalitaSalvateActivity" />
