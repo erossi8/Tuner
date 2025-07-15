@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Selettore Note -->
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/radioC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Do" />
+
+            <RadioButton
+                android:id="@+id/radioCSharp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Do#" />
+
+            <RadioButton
+                android:id="@+id/radioD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Re" />
+
+            <RadioButton
+                android:id="@+id/radioDSharp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Re#" />
+
+            <RadioButton
+                android:id="@+id/radioE"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mi" />
+
+            <RadioButton
+                android:id="@+id/radioF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fa" />
+
+            <RadioButton
+                android:id="@+id/radioFSharp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fa#" />
+
+            <RadioButton
+                android:id="@+id/radioG"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sol" />
+
+            <RadioButton
+                android:id="@+id/radioGSharp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sol#" />
+
+            <RadioButton
+                android:id="@+id/radioA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="La" />
+
+            <RadioButton
+                android:id="@+id/radioASharp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="La#" />
+
+            <RadioButton
+                android:id="@+id/radioB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Si" />
+        </RadioGroup>
+
+        <!-- Selettore Ottava -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnDecrease"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="−" />
+
+            <TextView
+                android:id="@+id/tvOctave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:text="4"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btnIncrease"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
