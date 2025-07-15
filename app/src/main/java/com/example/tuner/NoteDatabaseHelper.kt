@@ -19,7 +19,7 @@ class NoteDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_
     }
 
     override fun onCreate(db: SQLiteDatabase) {
-        // Tabella originale per le note
+
         db.execSQL("""
             CREATE TABLE $TABLE_NOTES (
                 $COL_NOTA TEXT PRIMARY KEY,
@@ -27,7 +27,6 @@ class NoteDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_
             )
         """)
 
-        // Nuova tabella per le tonalità salvate
         db.execSQL("""
             CREATE TABLE $TABLE_TONALITA (
                 $COL_ID INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -36,7 +35,7 @@ class NoteDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_
             )
         """)
 
-        // Inserisci le note standard (come prima)
+
         val noteStandard = listOf(
             "Do" to 261.63, "Do#" to 277.18, "Re" to 293.66,
             "Re#" to 311.13, "Mi" to 329.63, "Fa" to 349.23,
@@ -60,7 +59,7 @@ class NoteDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_
         }
     }
 
-    // Aggiungi una tonalità al database
+
     fun aggiungiTonalita(tonalita: String) {
         writableDatabase.execSQL("""
             INSERT INTO $TABLE_TONALITA ($COL_TONALITA) 
@@ -68,7 +67,7 @@ class NoteDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_
         """)
     }
 
-    // Ottieni tutte le tonalità salvate (ordinate dalla più recente)
+
     fun getTonalitaSalvate(): List<Pair<Int, String>> {
         val tonalita = mutableListOf<Pair<Int, String>>()
         readableDatabase.rawQuery("""
@@ -83,7 +82,7 @@ class NoteDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_
         return tonalita
     }
 
-    // Elimina una tonalità
+
     fun eliminaTonalita(id: Int) {
         writableDatabase.delete(
             TABLE_TONALITA,

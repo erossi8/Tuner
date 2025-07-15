@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity(), SettingsDialog.SettingsListener {
     private lateinit var btnRegister: Button
     private lateinit var btnTonalitaSalvate: Button
 
-    // Nuovi componenti per frequenza di riferimento
+
     private lateinit var btnIncreaseFreq: Button
     private lateinit var btnDecreaseFreq: Button
     private lateinit var tvReferenceFreq: TextView
@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity(), SettingsDialog.SettingsListener {
     private var currentNote = "A"
     private var currentOctave = 4
 
-    // Frequenza di riferimento (default 440 Hz)
+
     private var referenceFrequency = 440.0
 
     private val RECORD_AUDIO_REQUEST_CODE = 123

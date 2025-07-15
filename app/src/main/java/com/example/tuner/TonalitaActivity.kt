@@ -43,7 +43,7 @@ class TonalitaActivity : AppCompatActivity() {
             val result = TonalitaChecker.verificaTonalita(selectedNotes)
             findViewById<TextView>(R.id.tvRisultato).text = result ?: "Non è una tonalità valida"
 
-            // Salva la tonalità se valida
+
             result?.let { tonalita ->
                 NoteDatabaseHelper(this).aggiungiTonalita(tonalita)
                 Toast.makeText(this, "Tonalità salvata!", Toast.LENGTH_SHORT).show()

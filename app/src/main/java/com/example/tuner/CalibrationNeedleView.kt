@@ -5,11 +5,11 @@ import android.graphics.*
 import android.util.AttributeSet
 import android.view.View
 import kotlin.math.*
-// View personalizzata che disegna un ago che si sposta in base ai cent (scostamento della nota)
+
 class CalibrationNeedleView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null
 ) : View(context, attrs) {
-    // Valore in cent (-50 a +50) da rappresentare
+
     private var cents = 0f
 
     fun setCents(value: Float) {
